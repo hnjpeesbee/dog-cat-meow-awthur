@@ -6,7 +6,7 @@
         <div class="flex justify-between items-center py-6 md:space-x-10">
             <!-- STORE NAME / STORE LOGO -->
             <div class="flex justify-center md:justify-start lg:flex-1">
-                <h1 class="text-xl font-bold truncate">{{ section.settings.mobile_menu_title }}</h1>
+                <a href="{{ routes.root_url }}"><h1 class="text-xl font-bold truncate">{{ section.settings.mobile_menu_title }}</h1></a>
             </div>
 
             <!-- NAVIGATION MENU -->
@@ -99,7 +99,7 @@
                 <div class="flex items-center justify-between pb-3">
                     <div>
                         <h1 class="text-lg text-gray-500">
-                            {{ section.settings.mobile_menu_title }}
+                            <a href="{{ routes.root_url }}">{{ section.settings.mobile_menu_title }}</a>
                         </h1>
                     </div>
                     <div class="-mr-2">
