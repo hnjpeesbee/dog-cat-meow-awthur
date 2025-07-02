@@ -3,14 +3,14 @@
 
 <div class="relative bg-white" x-data="{ mobileMenuOpen: false }">
     <div class="mx-auto px-4 sm:px-6">
-        <div class="flex justify-between items-center py-6 md:space-x-10">
+        <div class="grid grid-cols-2 md:grid-cols-3 items-center py-6 md:space-x-10">
             <!-- STORE NAME / STORE LOGO -->
-            <div class="flex justify-center md:justify-start lg:flex-1">
+            <div class="flex mr-auto md:justify-start lg:flex-1">
                 <a href="{{ routes.root_url }}"><h1 class="text-xl font-bold truncate">{{ section.settings.mobile_menu_title }}</h1></a>
             </div>
 
             <!-- NAVIGATION MENU -->
-            <nav x-data="{ open: false }" class="hidden md:flex space-x-10">
+            <nav x-data="{ open: false }" class="hidden md:flex place-content-center text-nowrap md:space-x-10">
                 {% for menu-link in main_menu_linklist %}
                     {% if menu-link.links != blank %}
                         <div class="relative">
@@ -70,7 +70,7 @@
                 {% endfor %}
             </nav>
 
-            <div class="-mr-2 -my-2 ml-3 md:hidden">
+            <div class="-mr-2 -my-2 ml-auto md:hidden">
                 <button
                     @click="mobileMenuOpen = true"
                     type="button"
