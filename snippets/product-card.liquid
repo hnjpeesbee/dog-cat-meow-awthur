@@ -60,7 +60,7 @@
             <div class="flex flex-row my-1">
                 <p class="text-gray-800 text-lg pr-2">{{ product_item.price | money }}</p>
                 {% if product_item.compare_at_price > product_item.price %}
-                    <p class="text-red-700 text-sm my-auto line-through">
+                    <p class="text-red-700 text-xs my-auto line-through">
                         {{ product_item.compare_at_price | money }}
                     </p>
                 {% endif %}
