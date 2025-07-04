@@ -1,0 +1,17 @@
+<div class="max-w-6xl mx-auto px-4 py-12">
+    <div class="flex items-start md:items-end justify-between my-5">
+        <div class="w-1/2">
+            <h1 class="text-2xl font-bold text-gray-700">Order {{ order.name }}</h1>
+            <a class="text-gray-500 my-2" href="">Place on {{ order.created_at | date: format: 'date' }}</a>
+            <div><span class="text-sm text-white bg-gray-700 rounded-full px-4 py-1 my-2">{{ order.financial_status_label }}</span></div>
+        </div>
+
+        <a href="{{ routes.account_url }}" class="text-blue-700 hover-text-blue-900 underline font-medium">Back to account</a>
+    </div>
+
+    <div>
+        {% for line_items in order.line_items %}
+            
+        {% endfor %}
+    </div>
+</div>
